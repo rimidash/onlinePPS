@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>PC Online PPS</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+ <div id="loginbox">
+ <img src="img/logo_big.jpg" alt="Benedicon Online PPS" />
+ <form name="loginform" method="post" action="checklogin.php">
+ <table id="logintable">
+<tr>
+
+
+
+<td>
+
+
+
+<input class="login" name="myusername" placeholder="Benutzername" type="text" id="myusername"> 
+
+</td>
+</tr>
+<tr>
+
+
+<td><input class="password" name="mypassword" placeholder="Passwort" type="password" id="mypassword"></td>
+</tr>
+<tr>
+<td><input class="logButton" type="submit" name="Submit" value="Login"></td>
+</tr>
+</table>
+</form>
+ </div>
+</body>
+</html>

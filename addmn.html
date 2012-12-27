@@ -1,0 +1,173 @@
+<!DOCTYPE html >
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BC Online PPS</title>
+<link rel="stylesheet" href="style.css" type="text/css" /> 
+<script type="text/javascript" src="jui/js/jquery-1.8.3.js"></script>
+<link rel="stylesheet" href="jui/css/ui-lightness/jquery-ui-1.9.2.custom.css" />
+<script type="text/javascript" src="jui/js/jquery-ui-1.9.2.custom.js"></script>
+<script>
+    $(function() {
+        $( "#startpicker" ).datepicker();
+    });
+    </script>
+    <script>
+    $(function() {
+        $( "#endpicker" ).datepicker();
+    });
+    </script>
+    
+    <script>
+jQuery(function($){
+        $.datepicker.regional['de'] = {clearText: 'löschen', clearStatus: 'aktuelles Datum löschen',
+                closeText: 'schließen', closeStatus: 'ohne Änderungen schließen',
+                prevText: '<zurück', prevStatus: 'letzten Monat zeigen',
+                nextText: 'Vor>', nextStatus: 'nächsten Monat zeigen',
+                currentText: 'heute', currentStatus: '',
+                monthNames: ['Januar','Februar','März','April','Mai','Juni',
+                'Juli','August','September','Oktober','November','Dezember'],
+                monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun',
+                'Jul','Aug','Sep','Okt','Nov','Dez'],
+                monthStatus: 'anderen Monat anzeigen', yearStatus: 'anderes Jahr anzeigen',
+                weekHeader: 'Wo', weekStatus: 'Woche des Monats',
+                dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
+                dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
+                dayNamesMin: ['So','Mo','Di','Mi','Do','Fr','Sa'],
+                dayStatus: 'Setze DD als ersten Wochentag', dateStatus: 'Wähle D, M d',
+                dateFormat: 'dd.mm.yy', firstDay: 1, 
+                initStatus: 'Wähle ein Datum', isRTL: false};
+        $.datepicker.setDefaults($.datepicker.regional['de']);
+});    
+    
+    </script>
+</head>
+<body>
+
+<div id="all">
+<div id="header">
+<img src="img/logo.jpg">
+</img>
+</div>
+
+
+<div id="navleiste">
+<div id="titlebar">Administration - Maßnahmen verwalten</div>
+<ul id="nav">
+  <li><a href="#">Ausloggen</a></li>
+  <li><a href="#">Kategorien verwalten</a></li>
+  <li><a href="#">Maßnahmen verwalten</a></li>
+  <li><a href="#">User verwalten</a></li>
+  <li><a href="#">Zur Seite</a></li>
+</ul>
+
+</div>
+<div id="pps">
+<br />
+<input class="logButton" type="submit" name="showAdd" value="+ Maßnahme" onclick="$('#addForm').show('slow')">
+
+<form class="form" id="addForm">
+
+<input class="login" name="prio" placeholder="Priorität" type="text" id="prio" /> 
+
+<select class="select" name="sKat">
+      <option>Kategorie:</option>
+      <option>BCI</option>
+      <option>BCIT</option>
+      <option>qua</option>
+      <option>hyp</option>
+    </select>
+
+<input class="mn" name="mntext" placeholder="Maßnahme" type="text" id="mn" /> 
+<select class="select" name="sVa">
+      <option>VA:</option>
+      <option>mr</option>
+      <option>pp</option>
+      <option>bs</option>
+      <option>ar</option>
+    </select>
+    <select class="select" name="sCoVa">
+      <option>coVA:</option>
+      <option>mr</option>
+      <option>pp</option>
+      <option>bs</option>
+      <option>ar</option>
+    </select>
+    <input type="text" class="login" id="startpicker" placeholder="Beginn" />
+	 <input type="text" class="login" id="endpicker" placeholder="Ende" />
+	 
+	 
+	 
+	 erledigt?<input type="checkbox" name="done" value="erledigt?" /> <br />
+<input class="logButton" type="submit" name="okay" value="Abschicken" />
+<input class="logButton" type="submit" name="cancel" value="Abbrechen" onclick="$('#addForm').hide('100')" />
+
+</form>
+
+
+
+
+
+
+<table class="example table-autosort:*">
+<thead>
+<tr>
+<th class="table-sortable:alphanumeric"><b>Priorität</b></th>
+<th class="table-sortable:default"><b>Kategorie</b></th>
+<th class="table-sortable:default"><b><i>Maßnahme</i></b></th>
+<th class="table-sortable:default"><b>VA</b></th>
+<th class="table-sortable:default"><b>coVA</b></th>
+<th class="table-sortable:default"><b>Beginn</b></th>
+<th class="table-sortable:default"><b>Ende</b></th>
+<th class="table-sortable:default"><b>erledigt</b></th>
+<th class="del"><b> </b></th>
+<th class="edit"><b> </b></th>
+</tr> </thead>
+<tbody>
+<tr>
+
+<td>Mittel</td>
+<td>BCIT</td>
+<td class="totheleft">Online PPS</td>
+<td>mr</td>
+<td>jt</td>
+<td>18.12.2012</td>
+<td>04.01.2013</td>
+<td>Nein</td>
+<td class="edit"><a id="editbutton" href="#" /></td>
+<td class="delete"><a id="deletebutton" href="#"/></td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>BCIT</td>
+<td class="totheleft">Some Things</td>
+<td>tb</td>
+<td>mr</td>
+<td>18.12.2012</td>
+<td>04.01.2013</td>
+<td>Ja</td>
+<td class="edit"><a id="editbutton" href="#" /></td>
+<td class="delete"><a id="deletebutton" href="#"/></td>
+</tr>
+
+<tr>
+<td>Niedrig</td>
+<td>BCIT</td>
+<td>Some more Things</td>
+<td>pp</td>
+<td>bs</td>
+<td>18.12.2012</td>
+<td>04.01.2013</td>
+<td>Nein</td>
+<td class="edit"><a id="editbutton" href="#" /></td>
+<td class="delete"><a id="deletebutton" href="#"/></td>
+
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+</div>
+</body>
+</html>

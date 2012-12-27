@@ -1,0 +1,374 @@
+/*	CSS RESET 
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***** General Stuff ********/
+
+html {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  }
+  
+  
+body {
+
+	background: #fff;
+}
+
+
+/* Gerüst */
+#all {
+position:absolute;
+	width:1100px;
+	height:800px;
+	left:50%;
+	top:10px;
+	margin-left:-550px;
+	border: 1px dotted;
+
+}
+#header {
+	position:absolute;
+	width:1100px;
+	height: 54px;
+	 font-size: .8em;
+  font-family: Helvetica, Arial, non-serif;
+	background: #f2f2f2;
+}
+#header img {
+
+	margin-left:5px;
+	height:50%;
+	width:25%;
+}
+#titlebar {
+position:relative;
+float:left;
+width:400px;
+height:20px;
+background:#f2f2f2;
+font-size:1.1em;
+
+font-family: Helvetica, Arial, non-serif;
+padding-left:5px;
+
+}
+#navleiste {
+	position:absolute;
+	width:1100px;
+	top:54px;
+	height:20px;
+	background:#f2f2f2;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#CCCCCC;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#CCCCCC;
+
+
+}
+
+#navleiste li {
+
+  float: right;
+  margin: 0 0 0 3px;
+  height: 20px;
+  width: auto;
+  background-color: #F2F2F2;
+  text-align:center;
+  -webkit-transition: background 0.4s linear;
+  -moz-transition: background 0.4s ease-in;
+  border-left-style:solid;
+  border-color:#f38524;
+  border-left-width:.3em;
+}
+#navleiste li:hover {
+   background-color: white;
+  -webkit-box-shadow: 0px -1px 1px #666666;
+  -moz-box-shadow: 0px -1px 1px #666666;
+
+
+} 
+
+#navleiste li a {
+	height: 20px;
+  width: auto;
+  padding-top:3px;
+  padding-right:7px;
+  padding-left:5px;
+  color:black;
+  text-align: center;
+  font-size: .8em;
+  font-family: Helvetica, Arial, non-serif;
+  display: block;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s ease-in;
+  
+ 
+  
+ 
+  
+  }
+  
+ #nav li a:hover {
+
+  color: black;	
+}
+  
+  
+  #loginbox{
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	background-color: #f2f2f2;
+	position: absolute;
+	border: 1px solid #cacaca;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	}
+	
+#pps {
+	position:absolute;
+	top:150px;
+	width:1000px;
+	background-color:white;
+	height:auto;
+	left:50%;
+	font-family:sans-serif;
+	font-size:.75em;
+	margin-left:-500px;
+	
+	}
+#pps b {
+	text-align: center;
+	font-weight: bolder;	
+	font-size: 1.2em;
+	}
+
+#pps th.table-sortable {
+	cursor:pointer;
+	background-image:url("img/sorted.png");
+	background-position:center left;
+	background-repeat:no-repeat;
+	
+}
+#pps th.table-sorted-asc {
+	cursor:pointer;
+	background-image:url("img/sorted_desc.png");
+	background-position:center left;
+	background-repeat:no-repeat;
+}
+#pps th.table-sorted-desc {
+	cursor: pointer;
+	background-image:url("img/sorted_asc.png");
+	background-position:center left;
+	background-repeat:no-repeat;
+}
+#pps th {
+			padding-top:10px;
+			padding-right:30px;
+			padding-left:25px;	
+			border-bottom: 1px solid;
+			
+		}
+#pps i {
+					
+			padding-right:110px;
+			
+			}
+#pps h3 {
+
+	padding-left:45px;
+	}			
+			
+#pps td {
+	font-size: 1em;
+	font-weight: normal;
+	padding-left: 27px;
+	padding-top:6px;
+	padding-bottom:6px;
+	border-bottom: 1px black dotted;
+	
+	}
+#logintable{
+
+	margin-left: auto;
+	margin-right: auto;
+
+
+	}
+	#loginbox img {
+	display:block;
+	width:350px;
+	height: 70px;
+}
+	.login {
+	border: 1px solid #cacaca;
+	width:100px;
+	
+	
+	
+}
+
+.password {
+	border: 1px solid #cacaca;
+	width:100px;
+
+}
+.logButton {
+	border: 1px solid #cacaca;
+	width:100px;
+}
+
+
+.form {display: none;}
+ 
+.select {
+	
+	color:black;
+	background-color: white;	
+	width:100px;
+border: 1px solid #cacaca;
+	}
+ .mn {
+ 	border: 1px solid #cacaca;
+	width:250px;
+ 	
+ 	}
+ 	
+ 	
+ .ui-datepicker {
+ 	
+	font-size: 11pt; 	
+ 	
+ 	}	
+ 
+
+ 
+ 
+ #deletebutton {
+ 	width:15px;
+ 	height:15px;
+ 	display: block;
+ 	float:left;
+
+ 	background-position: left center;
+ 	background-image: url(img/delete_grey.png);
+ 	
+ 	
+ 	}
+ 	
+ 	
+ 	#pps td.delete {
+		padding-left:0px; 		
+ 		padding-right:0px;
+ 		
+ 		}
+#pps td.edit {
+		padding-left:0px; 		
+ 		padding-right:10px;
+ 		
+ 		}
+ 		
+ 		
+#pps th.del {
+		padding-left:0px; 		
+ 		padding-right:0px;
+ 		
+ 		}
+#pps th.edit {
+		padding-left:0px; 		
+ 		padding-right:0px;
+ 		
+ 		}
+#editbutton {
+ 	width:15px;
+ 	height:15px;
+ 	display: block;
+ 
+ 	background-image: url(img/edit_grey.png);
+ 	
+ 	
+ 	}
+ 	
+ 	.usertable th {
+	font-weight: bold; 		
+ 		
+ 		}
+ 	#editbutton:hover {
+ 		background-image: url(img/edit_orange.png);
+ 		}
+ 		
+#deletebutton:hover {
+ 		background-image: url(img/delete_orange.png);
+ 		}
+ .red {
+ 	
+ 	padding-top: 40px;
+	font-size: .75em;
+	color: red;
+ 	}
+ 	
+ 	
+ /*Userverwaltung */
+ 	
+ 	.usertable th {
+	font-weight: bold; 		
+ 		}
+ 		
+ 		
+ 		
+ 		
